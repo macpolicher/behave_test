@@ -1,1 +1,7 @@
 BDD FRAMEWORK USING BEHAVE AND PYTHON
+
+
+USING:
+1. LANGUAGE: Python Programming Language
+2. BDD: Behave
+3. REPORTING: Allure Report
