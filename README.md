@@ -1,4 +1,4 @@
-BDD FRAMEWORK USING BEHAVE AND PYTHON WITH PAGE OBJECT MODEL
+# BDD FRAMEWORK USING BEHAVE AND PYTHON WITH PAGE OBJECT MODEL
 
 
 USING:
@@ -9,7 +9,15 @@ USING:
 
 HOW TO USE:
 1. Clone the repository
-2. install the requirements.txt
+
+2. Add Interpreter
+
+Activate the virtual environment (Windows)
+
+venv\Scripts\activate
+
+   
+3. install the requirements.txt
    
 command: pip install -r requirements.txt
 
