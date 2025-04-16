@@ -16,3 +16,20 @@ command: pip install -r requirements.txt
 3. go to console and run sample script:
 
 python -m behave --tags=@valid_login
+
+
+
+
+
+
+**FOR SHOWING ALLURE REPORT:**
+
+Pre-requisite: Allure must be installed and configured in your machine.
+
+documentation: https://allurereport.org/docs/install-for-windows/
+
+
+**Commands: **
+1. FOR RUNNING TEST: python -m behave --tags=@valid_login
+2. FOR SETTING UP THE REPORT: allure generate --clean
+3. FOR OPENING THE REPORT: allure open
