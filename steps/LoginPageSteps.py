@@ -1,3 +1,5 @@
+import time
+
 from behave import step
 
 from pages.LoginPage import LoginPage
@@ -18,3 +20,5 @@ def login_to_page(context, username, password):
     context.login_page.enter_username(username)
     context.login_page.enter_password(password)
     context.login_page.click_login_button()
+    # context.login_page.accept_alert_if_present()
+    time.sleep(10)

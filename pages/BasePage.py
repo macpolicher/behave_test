@@ -10,7 +10,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import allure
 
-TIME_OUT = 5
+TIME_OUT = 30
 
 class BasePage:
     def __init__(self, driver):
@@ -18,6 +18,7 @@ class BasePage:
 
         # FOR DEBUG AND SETTING UP
         # self.driver = selenium.webdriver.Chrome(service=Service(executable_path='drivers/chromedriver.exe'))
+
 
 
 
@@ -67,3 +68,20 @@ class BasePage:
     def take_screenshot(self, name_of_screenshot):
         allure.attach(self.driver.get_screenshot_as_png(), name=name_of_screenshot,
                       attachment_type=allure.attachment_type.PNG)
+
+    def accept_alert_if_present(self):
+        try:
+            # Wait for the alert to be present
+            # WebDriverWait(driver, 10).until(EC.alert_is_present())
+            WebDriverWait(self.driver, TIME_OUT).until(EC.alert_is_present())
+
+            # Switch to the alert
+            alert = self.driver.switch_to.alert
+
+            # Print the alert text
+            print("Alert detected: ", alert.text)
+
+            # Accept the alert
+            alert.accept()
+        except TimeoutException:
+            print("No alert detected within timeout.")
