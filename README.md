@@ -41,3 +41,8 @@ documentation: https://allurereport.org/docs/install-for-windows/
 1. FOR RUNNING TEST: python -m behave --tags=@valid_login
 2. FOR SETTING UP THE REPORT: allure generate --clean
 3. FOR OPENING THE REPORT: allure open
+
+
+**IF REQUIRED**
+1. When you open the feature files for the first time and it's asking to install a Gherkin plugin in upper right corner, please install it
+2. When you open the .ini files for the first time and it's asking to install a .ini plugin in upper right corner, please install it
