@@ -65,5 +65,5 @@ class BasePage:
         return config.get(category, key)
 
     def take_screenshot(self, name_of_screenshot):
-        allure.attach(self.driver.get_screeshot_as_png(), name=name_of_screenshot,
+        allure.attach(self.driver.get_screenshot_as_png(), name=name_of_screenshot,
                       attachment_type=allure.attachment_type.PNG)

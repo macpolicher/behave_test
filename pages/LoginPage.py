@@ -9,7 +9,7 @@ password_xpath = '//input[@id="password"]'
 login_button_xpath = '//input[@id="login-button"]'
 
 #DATA
-URL = "https://www.saucedemo.com/v1/index.html"
+# URL = "https://www.saucedemo.com/v1/index.html"
 
 class LoginPage(BasePage):
     def __init__(self,driver):
@@ -17,7 +17,7 @@ class LoginPage(BasePage):
 
 
     def go_to_home_page(self):
-        self.open_browser(URL)
+        self.open_browser(self.read_config("basic info", "URL"))
 
 
     def login(self, username, password):
